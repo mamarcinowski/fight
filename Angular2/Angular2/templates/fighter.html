@@ -1,0 +1,79 @@
+﻿<div *ngIf="Fighter" class="fight-fighter">
+    <h3> {{ Fighter.Name }} <span class="label">level {{ Fighter.Level }}</span></h3>
+
+    <div>
+        <span class="label label-success">HP</span> {{ Fighter.CurrentHp }} / {{ Fighter.Hp }}
+        <strong>{{ Fighter.HpPercentage }} %</strong>
+        <div class="progress">
+            <div class="progress-bar"
+                 [class.progress-bar-success]="Fighter.HpPercentage > 50"
+                 [class.progress-bar-warning]="Fighter.HpPercentage > 20 && Fighter.HpPercentage <= 50"
+                 [class.progress-bar-danger]="Fighter.HpPercentage <= 20"
+                 [style.width]="Fighter.HpPercentage + '%'"></div>
+        </div>
+    </div>
+
+    <div>
+        <span class="label label-primary">Stance</span> {{ Fighter.Stance }}
+        <div class="progress">
+            <div class="progress-bar"
+                 [class.progress-bar-success]="Fighter.StancePercentage > 60"
+                 [class.progress-bar-primary]="Fighter.StancePercentage > 40 && Fighter.StancePercentage <= 60"
+                 [class.progress-bar-danger]="Fighter.StancePercentage <= 40"
+                 [style.width]="Fighter.StancePercentage + '%'"></div>
+        </div>
+    </div>
+
+
+    <div>
+        <span class="label">Speed {{ Fighter.Speed }}</span>
+        <div class="progress thin">
+            <div class="progress-bar progress-bar-info" [ngStyle]="{ 'width': (Fighter.Speed * 5) + '%' }"></div>
+        </div>
+    </div>
+
+    <div>
+        <span class="label">Precision {{ Fighter.Precision }}</span>
+        <div class="progress thin">
+            <div class="progress-bar progress-bar-info" [ngStyle]="{ 'width': (Fighter.Precision * 5) + '%' }"></div>
+        </div>
+    </div>
+
+    <div>
+        <span class="label">Dodge {{ Fighter.Dodge }}</span>
+        <div class="progress thin">
+            <div class="progress-bar progress-bar-info" [ngStyle]="{ 'width': (Fighter.Dodge * 5) + '%' }"></div>
+        </div>
+    </div>
+
+    <div>
+        <span class="label">Strength {{ Fighter.Strength }}</span>
+        <div class="progress thin">
+            <div class="progress-bar progress-bar-info" [ngStyle]="{ 'width': (Fighter.Strength * 5) + '%' }"></div>
+        </div>
+    </div>
+    <div>
+        <span class="label">Resistance {{ Fighter.Resistance }}</span>
+        <div class="progress thin">
+            <div class="progress-bar progress-bar-info" [ngStyle]="{ 'width': (Fighter.Resistance * 5) + '%' }"></div>
+        </div>
+    </div>
+    <div>
+        <span class="label">Skill {{ Fighter.Skill }}</span>
+        <div class="progress thin">
+            <div class="progress-bar progress-bar-info" [ngStyle]="{ 'width': (Fighter.Skill * 5) + '%' }"></div>
+        </div>
+    </div>
+    <br/>
+    <div class="btn-group">
+        <a class="btn btn-info btn-block dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+            {{ Fighter.CurrentMove.Display() }} <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li *ngFor="let move of Fighter.AvailableMoves" 
+                [class.active]="Fighter.CurrentMove == move">
+                <a (click)="Fighter.CurrentMove = move">{{ move.Display() }}</a>
+            </li>
+        </ul>
+    </div>
+</div>

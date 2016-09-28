@@ -1,0 +1,12 @@
+﻿Name ; Precission ; Skill ; Strength ; Damage ; Critical ; StanceImprovement ; StanceHit;
+
+attack
+
+JAB +2; +2; -2; 1-20 ; *2 ; 1-3 ; 1
+FIST 0 ; 0 ; +2; 5-40 ; *2 ; 1 ; 1-2
+LOW KICK -2 ; +2 ; +2; 10-40 ; *3 ; 1 ; 1-2
+HIGH KICK -3 ; -1 ; +6; 20-60 ; *3 ; 1 ; 1-3
+
+FLYING KNEE -8 ; +2 ; +8; 40-100 ; *5 ; 1 ; 1-4
+
+guard

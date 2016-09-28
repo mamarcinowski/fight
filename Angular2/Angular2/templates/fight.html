@@ -1,0 +1,27 @@
+﻿<section class="container-fluid fight" *ngIf="[Fight]">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-md-3"><fighter-component *ngIf="[Fight.Player1]" [Fighter]='Fight.Player1'></fighter-component></div>
+            <div class="col-md-6">
+                <div class="fight-toolbar">
+                    <a class="btn btn-primary" (click)="RequestStart()" [class.disabled]="IsRunning">
+                        <span class="glyphicon glyphicon-play"></span> Start
+                    </a>
+                    <a class="btn btn-default" (click)="RequestPause()" [class.disabled]="!IsRunning">
+                        <span class="glyphicon glyphicon-pause"></span> Pause
+                    </a>
+                </div>
+                <div class="fight-console"><!--MOVE TO COMPONENT-->
+                    <div *ngFor="let message of LogController.Archive" class="console-message">
+
+                        <small>{{ message.Date.toLocaleTimeString('pl-PL') }}</small> 
+                        <span class="message-content">{{ message.String }}</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3"><fighter-component *ngIf="[Fight.Player2]" [Fighter]='Fight.Player2'></fighter-component></div>
+        </div>
+    </div>
+</section>

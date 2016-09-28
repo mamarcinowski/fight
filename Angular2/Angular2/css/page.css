@@ -1,0 +1,30 @@
+html {
+    background: #fff;
+    background-image: url('../gfx/blood.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 70% cover;
+}
+
+body{
+    background: rgba(255, 255, 255, 0.85);
+}
+
+#screen{
+    position: relative;
+    min-height: 320px;
+}
+
+#screen > .fog-adorner{
+    background: -moz-linear-gradient(top,  rgba(230, 234, 244, 0.1) 0%, rgba(230, 234, 244, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(230, 234, 244, 0.1)) 0%,rgba(230, 234, 244, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(230, 234, 244, 0.1) 0%,rgba(230, 234, 244, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6eaf4', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+
+    height: 16px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    display: block;
+    pointer-events: none;
+}

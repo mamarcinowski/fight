@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fighters</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/page.css">
+
+    <link rel="stylesheet" href="css/theme/logo.css">
+    <link rel="stylesheet" href="css/theme/validation.css">
+    <link rel="stylesheet" href="css/theme/bootstrap.custom.css">
+    <link rel="stylesheet" href="css/theme/adorners.css">
+    <link rel="stylesheet" href="css/theme/anchors.css">
+    <link rel="stylesheet" href="css/theme/footer.css">
+    <link rel="stylesheet" href="css/theme/loading.css">
+    <link rel="stylesheet" href="css/theme/console.css">
+
+    <link rel="stylesheet" href="css/theme/fighter.css">
+    <link rel="stylesheet" href="css/theme/fight.css">
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+    <base href="/">
+  </head>
+
+  <body>
+      <my-app>
+          <div class="loading">
+              <img src="gfx/fist.svg" /><br/>
+              <h3>Please wait...</h3>
+          </div>
+      </my-app>
+
+      <script src="lib/jquery-1.9.1.min.js"></script>
+      <script src="lib/bootstrap.min.js"></script>
+  </body>
+</html>

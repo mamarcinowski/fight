@@ -1,0 +1,45 @@
+﻿<div class="fadein">
+    <section class="container">
+        <div class="bs-component">
+            <form class="form-horizontal row" *ngIf="Entity" (ngSubmit)="Save()" #fighterForm="ngForm">
+                <fieldset>
+                    <legend>{{ Entity.Name | uppercase }} | {{ Entity.Id }} </legend>
+                </fieldset>
+                <div class="form-group col-sm-8">
+                    <label for="inputName" class="col-md-2 control-label">Name</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" name="name"
+                               required
+                               [(ngModel)]="Entity.Name" placeholder="Name"
+                               #name="ngModel">
+                        <div [hidden]="name.valid || name.pristine"
+                             class="validation-error">
+                            Name is required
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="inputHp" class="col-md-2 control-label">Hp</label>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control" name="hp"
+                               required
+                               [(ngModel)]="Entity.Hp" placeholder="Hp"
+                               #hp="ngModel">
+                        <div [hidden]="hp.valid || hp.pristine"
+                             class="validation-error">
+                            Hp's value is required
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right col-sm-12">
+                    <button type="reset" class="btn btn-default" (click)="Cancel()">Cancel</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="!fighterForm.form.valid">Save</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <span class="alert alert-danger" *ngIf="Error">
+        {{Error.message}} | {{Error.status}}
+    </span>
+</div>

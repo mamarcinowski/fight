@@ -1,0 +1,29 @@
+﻿legend{
+    border:0;
+    border-left: 16px solid #008cba;
+    padding-left: 4px;
+}
+
+form{
+    margin: 16px;
+}
+
+.panel{
+    margin-bottom: 0;
+}
+
+.navbar{
+    margin-bottom: 0;
+    z-index: 999;
+}
+
+.progress{
+    padding: 0px;
+    margin-top: 1px;
+    margin-bottom: 4px;
+}
+
+.progress.thin{
+    height: 8px;
+}
+

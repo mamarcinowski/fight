@@ -1,0 +1,114 @@
+﻿.slidein {
+    -webkit-animation: slide .25s ease-out; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: slide .25s ease-out; /* Firefox < 16 */
+        -ms-animation: slide .25s ease-out; /* Internet Explorer */
+         -o-animation: slide .25s ease-out; /* Opera < 12.1 */
+            animation: slide .25s ease-out;
+}
+
+.fadein {
+    -webkit-animation: fadein .25s ease-out; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein .25s ease-out; /* Firefox < 16 */
+        -ms-animation: fadein .25s ease-out; /* Internet Explorer */
+         -o-animation: fadein .25s ease-out; /* Opera < 12.1 */
+            animation: fadein .25s ease-out;
+}
+
+.lightOff {
+    -webkit-animation: lightOff 5s ease-out; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: lightOff 5s ease-out; /* Firefox < 16 */
+        -ms-animation: lightOff 5s ease-out; /* Internet Explorer */
+         -o-animation: lightOff 5s ease-out; /* Opera < 12.1 */
+            animation: lightOff 5s ease-out;
+}
+
+
+@keyframes slide {
+    from { margin-top: -100px; }
+    to   { margin-top: 0px; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slide {
+    from { margin-top: -100px; }
+    to   { margin-top: 0px; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slide {
+    from { top: -100px; }
+    to   { top: 0px; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes slide {
+    from { top: -50%; }
+    to   { top: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes slide {
+    from { top: -50%; }
+    to   { top: 0; }
+}
+
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: .5; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes lightOff {
+    from { opacity: 1; }
+    to   { opacity: .5; }
+}
+
+@keyframes lightOff {
+    from { opacity: 1; }
+    to   { opacity: .5; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes lightOff {
+    from { opacity: 1; }
+    to   { opacity: .5; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes lightOff {
+    from { opacity: 1; }
+    to   { opacity: .5; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes lightOff {
+    from { opacity: 1; }
+    to   { opacity: .5; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes lightOff {
+    from { opacity: 1; }
+    to   { opacity: .5; }
+}

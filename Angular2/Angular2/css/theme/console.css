@@ -1,0 +1,50 @@
+﻿.fight-console{
+    height: 320px;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    border: 1px solid #333;
+    padding: 2px;
+}
+
+.fight-console::-webkit-scrollbar {
+    width: 12px;
+}
+
+.fight-console::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+
+.fight-console::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 2px;
+}
+
+.fight-console > .console-message{
+    padding: 0;
+    margin: 0;
+    opacity: .5;
+
+    transition: opacity .25s linear;
+}
+
+.fight-console > .console-message:nth-child(even){
+    border-bottom: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.fight-console > .console-message:nth-child(odd){
+    border-bottom: 1px solid #aaa;
+}
+
+.fight-console > .console-message:first-child{
+    font-weight: 600;
+    background: #000;
+    word-wrap: break-word;
+    padding: 16px;
+    opacity: 1;
+    font-size: 1.5em;
+    background: #fff;
+    color: #000;
+}
