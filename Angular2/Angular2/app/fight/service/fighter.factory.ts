@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 
 import { IddleMove } from './../moves/iddle.move';
 import { JabMove } from './../moves/jab.move';
+import { PushMove } from './../moves/push.move';
 import { FistMove } from './../moves/fist.move';
 import { LowKickMove } from './../moves/lowkick.move';
 import { FlyingKneeMove } from './../moves/flyingknee.move';
@@ -22,6 +23,7 @@ export class FighterFactory implements IFighterFactory {
     private _moves: IMove[];
 
     constructor(private _iddle: IddleMove,
+                private _push: PushMove,
                 private _fist: FistMove,
                 private _jab: JabMove,
                 private _lowKick: LowKickMove,
@@ -29,6 +31,7 @@ export class FighterFactory implements IFighterFactory {
         this._moves = new Array<IMove>(
             this._iddle,
             this._jab,
+            this._push,
             this._fist,
             this._lowKick,
             this._flyingKnee
@@ -36,11 +39,11 @@ export class FighterFactory implements IFighterFactory {
     }
 
     //level: 0 - 12
-    public Create(level: number = 0): Fighter {
+    public Create(level: number = 0, id: string = null): Fighter {
         var fighter = new Fighter(
             this.DrawName(),
             this._moves,
-            null);
+            id);
 
         fighter.Initialize(this._moves[Random.Next(this._moves.length - 1)], level);
         return fighter;

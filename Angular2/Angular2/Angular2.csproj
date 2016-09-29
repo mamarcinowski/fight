@@ -134,6 +134,7 @@
     <TypeScriptCompile Include="app\fight\moves\iddle.move.ts" />
     <TypeScriptCompile Include="app\fight\moves\fist.move.ts" />
     <TypeScriptCompile Include="app\fight\moves\flyingknee.move.ts" />
+    <TypeScriptCompile Include="app\fight\moves\push.move.ts" />
     <TypeScriptCompile Include="app\fight\moves\lowkick.move.ts" />
     <TypeScriptCompile Include="app\fight\service\damage.algorithm.ts" />
     <TypeScriptCompile Include="app\fight\service\stance.algorithm.ts" />

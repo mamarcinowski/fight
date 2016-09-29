@@ -32,8 +32,8 @@ export class FightersRepository implements IFightersRepository
     }
 
     private Mock(): void {
-        var p1 = this._fighterFactory.Create(3);
-        var p2 = this._fighterFactory.Create(3);
+        var p1 = this._fighterFactory.Create(3, '1');
+        var p2 = this._fighterFactory.Create(3, '2');
 
         this.Add(p1);
         this.Add(p2);

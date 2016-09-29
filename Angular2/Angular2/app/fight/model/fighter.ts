@@ -134,12 +134,12 @@ export class Fighter
         this._CurrentHp = this.Hp;
 
         this.Level = level;
-        this.Speed = Random._1k6() + level;
-        this.Precision = Random._1k6() + level;
-        this.Dodge = Random._1k6() + level;
-        this.Strength = Random._1k6() + level;
-        this.Resistance = Random._1k6() + level;
-        this.Skill = Random._1k6() + level;
+        this.Speed = Random._1k4() + level;
+        this.Precision = Random._1k4() + level;
+        this.Dodge = Random._1k4() + level;
+        this.Strength = Random._1k4() + level;
+        this.Resistance = Random._1k4() + level;
+        this.Skill = Random._1k4() + level;
 
         this.BringToLife();
         

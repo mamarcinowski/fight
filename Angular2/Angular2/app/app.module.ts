@@ -18,6 +18,7 @@ import { FighterDetailsComponent } from './screens/fighterdetails.component';
 
 import { IddleMove } from './fight/moves/iddle.move';
 import { JabMove } from './fight/moves/jab.move';
+import { PushMove } from './fight/moves/push.move';
 import { FistMove } from './fight/moves/fist.move';
 import { LowKickMove } from './fight/moves/lowkick.move';
 import { FlyingKneeMove } from './fight/moves/flyingknee.move';
@@ -68,6 +69,7 @@ from '@angular/common';
         FightLog,
         IddleMove,
         JabMove,
+        PushMove,
         FistMove,
         LowKickMove,
         FlyingKneeMove,
